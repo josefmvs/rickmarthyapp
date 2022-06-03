@@ -11,6 +11,6 @@ const client = new ApolloClient({
 
 test('app renders without error', () => {
   render(<ApolloProvider client={client}><BrowserRouter><App /></BrowserRouter></ApolloProvider>);
-  const linkElement = screen.getByText(/Characters Page/i);
+  const linkElement = screen.getByText(/Rick and Morty App/i);
   expect(linkElement).toBeInTheDocument();
 });

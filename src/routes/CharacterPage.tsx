@@ -65,7 +65,7 @@ const CharacterList = () => {
 
 const CharacterPage = () => (
   <Container>
-      <h1>Characters Page</h1>
+      <h1>Rick and Morty App</h1>
       <Box m={5}>
         <CharacterList /> 
       </Box> 
