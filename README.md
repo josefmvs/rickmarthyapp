@@ -1,7 +1,8 @@
 # Setting up the application
 
-* Clone the git repo
-* yarn install
+### Clone the git repo
+In the project directory, you can run:
+### yarn install
 
 
 # Running the app
