@@ -1,9 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+const client = new ApolloClient({
+  uri: '',
+  cache: new InMemoryCache()
+});
+
+test('app renders without error', () => {
+  render(<ApolloProvider client={client}><BrowserRouter><App /></BrowserRouter></ApolloProvider>);
+  const linkElement = screen.getByText(/Characters Page/i);
   expect(linkElement).toBeInTheDocument();
 });
